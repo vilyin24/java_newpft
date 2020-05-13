@@ -4,6 +4,7 @@ apply plugin: 'java'
 repositories {
     mavenCentral()
 }
+<<<<<<< HEAD
 test {
     useTestNG()
 }
@@ -11,4 +12,10 @@ dependencies {
     implementation 'org.testng:testng:7.1.0'
     implementation("org.testng:testng:7.1.0")
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-5'
+=======
+
+dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    implementation("org.testng:testng:7.1.0")
+>>>>>>> 7ca7bd86afa29eadeaee429ad8e33cb301d78602
 }
