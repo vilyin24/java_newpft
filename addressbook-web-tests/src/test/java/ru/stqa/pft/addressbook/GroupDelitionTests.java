@@ -5,16 +5,15 @@ import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+public class GroupDelitionTests extends TestBase {
 
-public class GroupCreationTests extends  TestBase{
 
 
   @Test
-  public void testGroupCreation() throws Exception {
+  public void testGroupDelition() throws Exception {
     gotoGroupPage();
-    initGroupCreation();
-    fillGroupForm(new GroupDate("1", "2", "3"));
-    submitGroupCreation();
+    selectGroup();
+    deleteGroup();
     gotoGroupPage();
   }
 
