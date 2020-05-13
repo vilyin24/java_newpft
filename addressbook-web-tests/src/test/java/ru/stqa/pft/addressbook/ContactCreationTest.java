@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class ContactCreationTest {
   private WebDriver wd;
 
-  @BeforeMethod(alwaysRun = true)
+  @BeforeMethod
   public void setUp() throws Exception {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
