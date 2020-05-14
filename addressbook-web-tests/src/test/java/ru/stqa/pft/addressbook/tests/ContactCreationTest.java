@@ -7,11 +7,11 @@ public class ContactCreationTest extends TestBase{
 
   @Test
   public void testContactCreation() throws Exception {
-    app.goToContactPage();
-    app.initContact();
-    app.fiiContactForm(new ContactDate("1", "2", "3"));
-    app.sumbitContactCreation();
-    app.goToContactPage();
+    app.getNavigationHelper().goToContactPage();
+    app.getContactHelper().initContact();
+    app.getContactHelper().fiiContactForm(new ContactDate("1", "2", "3"));
+    app.getContactHelper().sumbitContactCreation();
+    app.getContactHelper().returnToContactPage();
   }
 
 }

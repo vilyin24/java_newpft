@@ -6,11 +6,11 @@ public class ContactDelitionTest extends TestBase {
 
   @Test
   public void contactDelitionTests() throws Exception {
-    app.goToContactPage();
-    app.selectContact();
-    app.deleteContact();
-    app.closeAlertForWindowsContact();
-    app.goToContactPage();
+    app.getNavigationHelper().goToContactPage();
+    app.getContactHelper().selectContact();
+    app.getContactHelper().deleteContact();
+    app.getContactHelper().closeAlertForWindowsContact();
+    app.getContactHelper().returnToContactPage();
   }
 
 }
