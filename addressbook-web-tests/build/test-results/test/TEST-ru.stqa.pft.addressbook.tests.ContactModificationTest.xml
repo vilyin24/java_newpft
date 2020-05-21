@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-21T22:41:13" hostname="ПЁС-ПК" time="19.512">
+  <properties/>
+  <testcase name="testContactModification" classname="ru.stqa.pft.addressbook.tests.ContactModificationTest" time="19.512"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 16938
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1590100871.369][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
+мая 22, 2020 1:41:12 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
