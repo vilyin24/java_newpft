@@ -10,7 +10,7 @@ public class ContactModificationTest extends TestBase {
         app.getNavigationHelper().goToContactPage();
         app.getContactHelper().selectContact();
         app.getContactHelper().ininContactModification();
-        app.getContactHelper().fiiContactForm(new ContactDate("1", "2", "3"));
+        app.getContactHelper().fiiContactForm(new ContactDate("1", "4", "5",null),false);
         app.getContactHelper().submitContactModification();
         app.getContactHelper().returnToContactPage();
     }

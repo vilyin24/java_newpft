@@ -9,7 +9,7 @@ public class ContactCreationTest extends TestBase{
   public void testContactCreation() throws Exception {
     app.getNavigationHelper().goToContactPage();
     app.getContactHelper().initContact();
-    app.getContactHelper().fiiContactForm(new ContactDate("1", null, null));
+    app.getContactHelper().fiiContactForm(new ContactDate("1", "2", "3","1"),true);
     app.getContactHelper().sumbitContactCreation();
     app.getContactHelper().returnToContactPage();
   }

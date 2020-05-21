@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-21T21:25:10" hostname="ПЁС-ПК" time="2.456">
+  <properties/>
+  <testcase name="testGroupCreation" classname="ru.stqa.pft.addressbook.tests.GroupCreationTests" time="2.456"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 33106
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1590096305.521][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
+мая 22, 2020 12:25:08 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1590096309.401][SEVERE]: Timed out receiving message from renderer: 0.100
+[1590096309.502][SEVERE]: Timed out receiving message from renderer: 0.100
+[1590096309.604][SEVERE]: Timed out receiving message from renderer: 0.100
+[1590096309.709][SEVERE]: Timed out receiving message from renderer: 0.100
+[1590096309.813][SEVERE]: Timed out receiving message from renderer: 0.100
+]]></system-err>
+</testsuite>

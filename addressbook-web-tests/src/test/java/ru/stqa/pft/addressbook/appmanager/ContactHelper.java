@@ -2,8 +2,11 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
 public class ContactHelper extends HelperBase {
@@ -16,11 +19,18 @@ public class ContactHelper extends HelperBase {
         click(By.name("submit"));
     }
 
-    public void fiiContactForm(ContactDate contactDate) {
+    public void fiiContactForm(ContactDate contactDate,boolean creation) {
         type(By.name("firstname"), contactDate.getFistname());
         type(By.name("middlename"), contactDate.getMiddlename());
         type(By.name("lastname"), contactDate.getLastname());
-    }
+
+        if (creation) {
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
+        }
+        else{
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
+        }
+        }
 
     public void returnToContactPage() {
         click(By.linkText("home"));
