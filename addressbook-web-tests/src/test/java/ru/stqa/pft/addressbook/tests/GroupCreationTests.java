@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.GroupDate;
 
+import java.util.List;
+
 
 public class GroupCreationTests extends  TestBase{
 
@@ -11,10 +13,10 @@ public class GroupCreationTests extends  TestBase{
   @Test
   public void testGroupCreation() throws Exception {
     app.getNavigationHelper().gotoGroupPage();
-    int before = app.getGroupHelper().getGroupCount();
+      List<GroupDate> before = app.getGroupHelper().getGroupList();
     app.getGroupHelper().createGroup(new GroupDate("1",null,null));
-    int after = app.getGroupHelper().getGroupCount();
-    Assert.assertEquals(after,before+1);
+      List<GroupDate> after = app.getGroupHelper().getGroupList();
+    Assert.assertEquals(after.size(),before.size()+1);
 
   }
 
