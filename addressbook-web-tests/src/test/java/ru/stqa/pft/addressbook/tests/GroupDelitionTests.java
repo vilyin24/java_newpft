@@ -22,6 +22,9 @@ public class GroupDelitionTests extends TestBase {
     app.getGroupHelper().returnToGroupPage();
     List<GroupDate> after = app.getGroupHelper().getGroupList();
     Assert.assertEquals(after.size(),before.size() - 1);
+
+    before.remove(before.size() - 1);
+    Assert.assertEquals(before,after);
   }
 
 }
