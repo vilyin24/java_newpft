@@ -6,22 +6,13 @@ public class GroupDate {
     private final String name;
     private final String header;
     private final String footer;
-    private final String id;
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GroupDate groupDate = (GroupDate) o;
-        return Objects.equals(name, groupDate.name) &&
-                Objects.equals(id, groupDate.id);
+    public void setId(int id) {
+        this.id = id;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, id);
-    }
+    private  int id;
+
 
     @Override
     public String toString() {
@@ -31,21 +22,36 @@ public class GroupDate {
                 '}';
     }
 
-    public String getId() {
+    public int  getId() {
         return id;
     }
 
-    public GroupDate(String id, String name, String header, String footer) {
+    public GroupDate(int  id, String name, String header, String footer) {
         this.name = name;
         this.header = header;
         this.footer = footer;
         this.id = id;
     }
-    public GroupDate( String name, String header, String footer) {
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupDate groupDate = (GroupDate) o;
+        return id == groupDate.id &&
+                Objects.equals(name, groupDate.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, id);
+    }
+
+    public GroupDate(String name, String header, String footer) {
         this.name = name;
         this.header = header;
         this.footer = footer;
-        this.id = null;
+        this.id = 0;
     }
 
     public String getName() {

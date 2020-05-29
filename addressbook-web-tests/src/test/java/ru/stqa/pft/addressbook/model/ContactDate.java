@@ -7,10 +7,13 @@ public class ContactDate {
     private final String middlename;
     private final String lastname;
     private String group;
-    private  final int id;
+    private  int id;
 
 
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public int getId() {
         return id;
     }
