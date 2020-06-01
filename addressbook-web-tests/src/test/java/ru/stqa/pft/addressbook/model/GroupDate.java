@@ -38,20 +38,19 @@ public class GroupDate {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GroupDate groupDate = (GroupDate) o;
-        return id == groupDate.id &&
-                Objects.equals(name, groupDate.name);
+        return Objects.equals(name, groupDate.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, id);
+        return Objects.hash(name);
     }
 
     public GroupDate(String name, String header, String footer) {
         this.name = name;
         this.header = header;
         this.footer = footer;
-        this.id = 0;
+        this.id = Integer.MAX_VALUE;
     }
 
     public String getName() {
