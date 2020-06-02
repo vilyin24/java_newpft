@@ -67,7 +67,7 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public void createContact(ContactDate contact, boolean b) {
+    public void create(ContactDate contact, boolean b) {
         initContact();
         fiiContactForm(contact,true);
         sumbitContactCreation();
@@ -82,7 +82,7 @@ public class ContactHelper extends HelperBase {
        return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<ContactDate> getContactList() {
+    public List<ContactDate> list() {
         List<ContactDate> contacts = new ArrayList<ContactDate>();
         List <WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements ){
@@ -95,6 +95,19 @@ public class ContactHelper extends HelperBase {
         }
 
         return contacts;
+    }
+    public void modify(int index, ContactDate contact) {
+        selectContact(index);
+        ininContactModification(index);
+        fiiContactForm((contact),false);
+        submitContactModification();
+        returnToContactPage();
+    }
+   public void delete(int index) {
+        selectContact(index);
+        deleteContact();
+        closeAlertForWindowsContact();
+        returnToContactPage();
     }
 }
 

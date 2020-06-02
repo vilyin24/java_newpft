@@ -8,20 +8,20 @@ import java.util.List;
 
 public class ContactDelitionTest extends TestBase {
 
+  @BeforeMethod
+  public void ensurePreconditions() {
+    app.goTo().contactPage();
+    if (app.getcontact().list().size() == 0) {
+      app.getcontact().create(new ContactDate("1", "2", "1", "1"), true);
+    }
+  }
   @Test
   public void contactDelitionTests() throws Exception {
-    app.getNavigationHelper().goToContactPage();
-    if(!app.getContactHelper().isThereContact()){
-    app.getContactHelper().createContact(new ContactDate("1", "2", "3","1"),true);
-    }
-    List<ContactDate> before = app.getContactHelper().getContactList();
-    app.getContactHelper().selectContact(before.size() -1);
-    app.getContactHelper().deleteContact();
-    app.getContactHelper().closeAlertForWindowsContact();
-    app.getContactHelper().returnToContactPage();
-    List<ContactDate> after = app.getContactHelper().getContactList();
+    List<ContactDate> before = app.getcontact().list();
+    app.getcontact().delete(before.size() -1);
+    List<ContactDate> after = app.getcontact().list();
 
-    before.remove(before.size() - 1);
+    before.remove(before.size() -1);
     Assert.assertEquals(before.size(),after.size());
   }
 

@@ -1,35 +1,32 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.stqa.pft.addressbook.model.ContactDate;
 import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class GroupModificationTests extends  TestBase {
 
-
+    @BeforeMethod
+    public void ensurePreconditions(){
+        app.goTo().groupPage();
+        if(app.group().list().size() == 0){
+            app.group().create(new GroupDate("1", null, null));
+        }
+    }
     @Test
     public  void testGroupModification(){
-        app.getNavigationHelper().gotoGroupPage();
-        if(! app.getGroupHelper().isThereAGroup()){
-            app.getGroupHelper().createGroup(new GroupDate("1", null, null));
-        }
-        List<GroupDate> before = app.getGroupHelper().getGroupList();
-        app.getGroupHelper().selectGroup(before.size() - 1);
-        app.getGroupHelper().initGroupModification();
-        GroupDate group = new GroupDate(before.get( before.size() -1).getId(),"2", "2", "3");
-        app.getGroupHelper().fillGroupForm(group);
-        app.getGroupHelper().submitModification();
-        app.getGroupHelper().returnToGroupPage();
-        List<GroupDate> after = app.getGroupHelper().getGroupList();
+        List<GroupDate> before = app.group().list();
+        int index = before.size() - 1;
+        GroupDate group = new GroupDate(before.get(index).getId(),"2", "2", "3");
+        app.group().modify(index, group);
+        List<GroupDate> after = app.group().list();
         Assert.assertEquals(after.size(),before.size());
 
-        before.remove(before.size() - 1);
+        before.remove(index);
         before.add(group);
         Comparator<? super GroupDate> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
         before.sort(byId);
@@ -37,5 +34,6 @@ public class GroupModificationTests extends  TestBase {
         Assert.assertEquals(before,after);
 
     }
+
 
 }
