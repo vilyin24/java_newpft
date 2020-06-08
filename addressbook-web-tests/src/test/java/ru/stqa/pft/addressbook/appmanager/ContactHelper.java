@@ -9,9 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactDate;
+import ru.stqa.pft.addressbook.model.Contacts;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactHelper extends HelperBase {
 
@@ -52,16 +55,11 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//input[@value='Delete']"));
     }
 
-    public void selectContact(int index) {
-        wd.findElements(By.name("selected[]")).get(index).click();
-
+    public void selectContactById(int id) {
+        wd.findElement(By.cssSelector("input[value = '" + id + "']")).click();
     }
-
-
-
-    public void ininContactModification(int index) {
-        wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
-    }
+    public void ininContactModificationByid(int  id) { wd.findElement(By.xpath(String.format("//tr[.//input[@value='%s']]/td[8]/a",id))).click();
+   }
     public void submitContactModification() {
         click((By.xpath("(//input[@name='update'])[2]")));
     }
@@ -82,29 +80,29 @@ public class ContactHelper extends HelperBase {
        return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<ContactDate> list() {
-        List<ContactDate> contacts = new ArrayList<ContactDate>();
+    public Contacts total() {
+        Contacts contacts = new Contacts();
         List <WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements ){
             List<WebElement> cells = element.findElements(By.tagName("td"));
             int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
             String lastname = cells.get(1).getText();
             String firsttname = cells.get(2).getText();
-            ContactDate contact = new ContactDate(id,firsttname,null,lastname,null);
-           contacts.add(contact);
+            contacts.add(new ContactDate().withtId(id).withLastname(lastname).withFistname(firsttname));
         }
 
         return contacts;
     }
-    public void modify(int index, ContactDate contact) {
-        selectContact(index);
-        ininContactModification(index);
+    public void modify( ContactDate contact) {
+        selectContactById(contact.getId());
+        ininContactModificationByid(contact.getId());
         fiiContactForm((contact),false);
         submitContactModification();
         returnToContactPage();
     }
-   public void delete(int index) {
-        selectContact(index);
+
+    public void delete(ContactDate contact) {
+        selectContactById(contact.getId());
         deleteContact();
         closeAlertForWindowsContact();
         returnToContactPage();

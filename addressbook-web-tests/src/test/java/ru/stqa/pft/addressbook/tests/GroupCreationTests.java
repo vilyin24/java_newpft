@@ -1,11 +1,19 @@
 package ru.stqa.pft.addressbook.tests;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.GroupDate;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.assertEquals;
 
 
 public class GroupCreationTests extends  TestBase{
@@ -14,19 +22,14 @@ public class GroupCreationTests extends  TestBase{
   @Test
   public void testGroupCreation() throws Exception {
     app.goTo().groupPage();
-      List<GroupDate> before = app.group().list();
-      GroupDate group = new GroupDate("1",null,null);
+    Groups before = app.group().all();
+      GroupDate group = new GroupDate().withName("test1");
     app.group().create(group);
-      List<GroupDate> after = app.group().list();
-    Assert.assertEquals(after.size(),before.size()+1);
+    Groups after = app.group().all();
+    assertThat(after.size(),equalTo(before.size()+1));
 
-
-    group.setId(after.stream().max( (o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
-    before.add(group);
-    Comparator<? super GroupDate> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
-    before.sort(byId);
-    after.sort(byId);
-    Assert.assertEquals(before,after);
+    assertThat(after,equalTo(
+            before.withAdded(group.withtId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 
 }
