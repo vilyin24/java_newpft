@@ -1,12 +1,8 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.checkerframework.checker.units.qual.s;
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -19,7 +15,7 @@ public class ContactPhoneTests  extends  TestBase{
     @Test()
     public void testContactPhones(){
         app.getcontact().returnToContactPage();
-        ContactDate contact = app.getcontact().total().iterator().next();
+        ContactDate contact = app.getcontact().all().iterator().next();
         ContactDate contactInfoFromEditForm = app.getcontact().infoFromEdition(contact);
 
         assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));

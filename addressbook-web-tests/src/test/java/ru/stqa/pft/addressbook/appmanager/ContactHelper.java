@@ -30,6 +30,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("firstname"), contactDate.getFistname());
         type(By.name("middlename"), contactDate.getMiddlename());
         type(By.name("lastname"), contactDate.getLastname());
+        attach(By.name("photo"),contactDate.getPhoto());
 
         if (creation) {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
@@ -105,7 +106,7 @@ public class ContactHelper extends HelperBase {
        return wd.findElements(By.name("selected[]")).size();
     }
 
-    public Contacts total() {
+    public Contacts all() {
         Contacts contacts = new Contacts();
         List <WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements ){
