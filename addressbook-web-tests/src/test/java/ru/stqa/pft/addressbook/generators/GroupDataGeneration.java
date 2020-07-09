@@ -3,6 +3,8 @@ package ru.stqa.pft.addressbook.generators;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.thoughtworks.xstream.XStream;
+import okhttp3.internal.http2.Hpack;
 import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.io.File;
@@ -20,6 +22,9 @@ public class GroupDataGeneration {
     @Parameter(names = "-f", description =  "Target file")
     public String file;
 
+    @Parameter(names = "-d", description =  "Date format")
+    public String format;
+
     public static void main(String[] args) throws IOException {
         GroupDataGeneration generator = new GroupDataGeneration();
         JCommander jCommander = new JCommander(generator);
@@ -36,10 +41,27 @@ public class GroupDataGeneration {
 
     private void run() throws IOException {
         List<GroupDate> groups = generateGroups(count);
-        save(groups, new File(file));
+        if (format.equals("cvs")) {
+            saveAsCsv(groups, new File(file));
+        }
+        else if(format.equals("xml")) {
+            saveAsXml(groups, new File(file));
+        }
+        else {
+            System.out.println("Unrecognized format" + format);
+        }
     }
 
-    private  void save(List<GroupDate> groups, File file) throws IOException {
+    private void saveAsXml(List<GroupDate> groups, File file) throws IOException {
+        XStream xStream = new XStream();
+        xStream.processAnnotations(GroupDate.class);
+        String xml = xStream.toXML(groups);
+        Writer writer = new FileWriter(file);
+        writer.write(xml);
+        writer.close();
+    }
+
+    private  void saveAsCsv(List<GroupDate> groups, File file) throws IOException {
         System.out.println(new File(".").getAbsolutePath());
         Writer writer = new FileWriter(file);
         for (GroupDate group: groups) {
