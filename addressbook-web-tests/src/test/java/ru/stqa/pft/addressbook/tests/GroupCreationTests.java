@@ -1,5 +1,7 @@
 package ru.stqa.pft.addressbook.tests;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
@@ -9,6 +11,7 @@ import ru.stqa.pft.addressbook.model.GroupDate;
 import ru.stqa.pft.addressbook.model.Groups;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -20,7 +23,7 @@ import static org.testng.Assert.assertEquals;
 public class GroupCreationTests extends  TestBase{
 
   @DataProvider
-  public Iterator<Object[]> validGroups() throws IOException {
+  public Iterator<Object[]> validGroupsFromXml() throws IOException {
     BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/java/ru/stqa/pft/addressbook/resources/groups.xml")));
     String xml ="";
     String line = reader.readLine();
@@ -33,8 +36,21 @@ public class GroupCreationTests extends  TestBase{
       List<GroupDate >groups =  (List<GroupDate>) xStream.fromXML(xml);
       return  groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
+    @DataProvider
+    public Iterator<Object[]> validGroupsFromJson() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/java/ru/stqa/pft/addressbook/resources/groups.json")));
+        String json ="";
+        String line = reader.readLine();
+        while (line != null) {
+           json += line;
+            line = reader.readLine();
+        }
+        Gson gson = new Gson();
+        List<GroupDate >groups = gson.fromJson(json,new TypeToken<List<GroupDate>>(){}.getType());
+        return  groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+    }
 
-  @Test(dataProvider = "validGroups")
+  @Test(dataProvider = "validGroupsFromJson")
   public void testGroupCreation(GroupDate group ) throws Exception {
       app.goTo().groupPage();
       Groups before = app.group().all();
@@ -47,11 +63,11 @@ public class GroupCreationTests extends  TestBase{
 
 
 
-  @Test
+  @Test(enabled =  false)
   public void testBadGroupCreation() throws Exception {
     app.goTo().groupPage();
     Groups before = app.group().all();
-    GroupDate group = new GroupDate().withName("test1'");
+    GroupDate group = new GroupDate().withName("test1");
     app.group().create(group);
     assertThat(app.group().count(),equalTo(before.size()));
     Groups after = app.group().all();
