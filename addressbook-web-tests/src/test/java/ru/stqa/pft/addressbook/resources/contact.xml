@@ -1,0 +1,17 @@
+<list>
+  <contact>
+    <fistname>first 0</fistname>
+    <middlename>middle 0</middlename>
+    <lastname>last 0</lastname>
+  </contact>
+  <contact>
+    <fistname>first 1</fistname>
+    <middlename>middle 1</middlename>
+    <lastname>last 1</lastname>
+  </contact>
+  <contact>
+    <fistname>first 2</fistname>
+    <middlename>middle 2</middlename>
+    <lastname>last 2</lastname>
+  </contact>
+</list>

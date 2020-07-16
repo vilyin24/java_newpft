@@ -36,7 +36,7 @@ public class ContactHelper extends HelperBase {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
         }
         else{
-            Assert.assertFalse(isElementPresent(By.name("new_group")));
+           // Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
         }
 
@@ -93,7 +93,7 @@ public class ContactHelper extends HelperBase {
 
     public void create(ContactDate contact, boolean b) {
         initContact();
-        fiiContactForm(contact,true);
+        fiiContactForm(contact,false);
         sumbitContactCreation();
         returnToContactPage();
     }
