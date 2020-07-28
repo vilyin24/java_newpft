@@ -1,15 +1,11 @@
 package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.File;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "addressbook")
@@ -20,40 +16,69 @@ public class ContactDate {
 
     @Expose
     @Column(name = "firstname")
-    @Type(type = "text")
-    private  String fistname;
+    private  String firstname;
+
+    @Override
+    public String toString() {
+        return "ContactDate{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", middlename='" + middlename + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
+    }
 
     @Expose
-    @Type(type = "text")
     @Column(name = "middlename")
     private  String middlename;
 
     @Expose
-    @Type(type = "text")
     @Column(name = "lastname")
     private  String lastname;
 
-    private  String mobilePhone;
-    private  String homePhone;
-    private  String workPhone;
-    @Expose
+    @Column(name = "mobile")
     @Type(type = "text")
-    @Column(name = "")
+    private  String mobilePhone;
+
+    @Column(name = "home")
+    @Type(type = "text")
+    private  String homePhone;
+
+    @Column(name = "work")
+    @Type(type = "text")
+    private  String workPhone;
+
+    @Transient
     private  String allPhones;
+    @Transient
     private String group;
+
+    @Column(name = "email")
+    @Type(type = "text")
     private String email;
+
+    @Column(name = "email2")
+    @Type(type = "text")
     private String email2;
+
+    @Column(name = "email3")
+    @Type(type = "text")
     private String email3;
+
+    @Transient
     private String allemails;
-    private File photo;
+
+    @Column(name = "photo")
+    @Type(type = "text")
+    private String photo;
 
 
     public File getPhoto() {
-        return photo;
+        return new File(photo);
     }
 
     public ContactDate withPhoto(File photo) {
-        this.photo = photo;
+        this.photo = photo.getPath();
         return this;
     }
 
@@ -143,8 +168,8 @@ public class ContactDate {
         return Objects.hash(lastname, id);
     }
 
-    public  ContactDate withFistname(String fistname) {
-        this.fistname = fistname;
+    public  ContactDate withFistname(String firstname) {
+        this.firstname = firstname;
         return this;
     }
 
@@ -173,20 +198,12 @@ public class ContactDate {
     }
 
 
-    public String getFistname() {
-        return fistname;
+    public String getFirstname() {
+        return firstname;
     }
 
     public String getMiddlename() {
         return middlename;
-    }
-
-    @Override
-    public String toString() {
-        return "ContactDate{" +
-                "lastname='" + lastname + '\'' +
-                ", id=" + id +
-                '}';
     }
 
     public String getLastname() {

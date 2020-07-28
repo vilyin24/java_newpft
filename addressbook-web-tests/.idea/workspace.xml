@@ -26,25 +26,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.4/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/stqa/pft/addressbook/model/ContactDate.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ru/stqa/pft/addressbook/model/ContactDate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/stqa/pft/addressbook/model/GroupDate.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ru/stqa/pft/addressbook/model/GroupDate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.GroupCreationTests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/stqa/pft/addressbook/tests/HbConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ru/stqa/pft/addressbook/tests/HbConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.HbConnectionTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.HbConnectionTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/ru.stqa.pft.addressbook.tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/ru.stqa.pft.addressbook.tests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.GroupCreationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.HbConnectionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.HbConnectionTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/generators/ContactDateGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/generators/ContactDateGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/model/ContactDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/model/ContactDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/model/GroupDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/model/GroupDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/HbConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/HbConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <recent name="ru.stqa.pft.addressbook.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HbConnectionTest.testHbConnection">
+  <component name="RunManager" selected="Gradle.HbConnectionTest">
     <configuration name="GroupDataGeneration" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.GroupDataGeneration" />
       <module name="addressbook-web-tests.test" />
@@ -223,10 +221,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HbConnectionTest" />
         <item itemvalue="Gradle.HbConnectionTest.testHbConnection" />
         <item itemvalue="Gradle.HbConnectionTest.testHb2Connection" />
         <item itemvalue="Gradle.Hb2ConnectionTest" />
-        <item itemvalue="Gradle.HbConnectionTest" />
         <item itemvalue="Gradle.DcConnectionTest" />
       </list>
     </recent_temporary>
@@ -261,10 +259,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595351534553" />
-    <state x="988" y="320" key="#com.intellij.ide.util.MemberChooser" timestamp="1594073207802">
+    <state x="988" y="320" key="#com.intellij.ide.util.MemberChooser" timestamp="1595971105397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="988" y="320" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1594073207802" />
+    <state x="988" y="320" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595971105397" />
     <state x="665" y="295" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1590092071181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,33 +275,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1591302030604" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595961233179">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595970228265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595961233179" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595970228265" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590448918541" />
-    <state width="1876" height="203" key="GridCell.Tab.0.bottom" timestamp="1595962531750">
+    <state width="1876" height="203" key="GridCell.Tab.0.bottom" timestamp="1595971032355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="203" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595962531750" />
+    <state width="1876" height="203" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595971032355" />
     <state width="1236" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.1024@1920.0.1280.1024" timestamp="1594071889424" />
     <state width="1876" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590449058463" />
-    <state width="1876" height="203" key="GridCell.Tab.0.center" timestamp="1595962531750">
+    <state width="1876" height="203" key="GridCell.Tab.0.center" timestamp="1595971032355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="203" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595962531750" />
+    <state width="1876" height="203" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595971032355" />
     <state width="1236" height="295" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.1024@1920.0.1280.1024" timestamp="1594071889424" />
     <state width="1876" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590449058462" />
-    <state width="1876" height="203" key="GridCell.Tab.0.left" timestamp="1595962531750">
+    <state width="1876" height="203" key="GridCell.Tab.0.left" timestamp="1595971032354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="203" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595962531750" />
+    <state width="1876" height="203" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595971032354" />
     <state width="1236" height="295" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.1024@1920.0.1280.1024" timestamp="1594071889424" />
     <state width="1876" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590449058462" />
-    <state width="1876" height="203" key="GridCell.Tab.0.right" timestamp="1595962531750">
+    <state width="1876" height="203" key="GridCell.Tab.0.right" timestamp="1595971032355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="203" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595962531750" />
+    <state width="1876" height="203" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1595971032355" />
     <state width="1236" height="295" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.1024@1920.0.1280.1024" timestamp="1594071889424" />
     <state width="1876" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590449058462" />
     <state width="1876" height="285" key="GridCell.Tab.1.bottom" timestamp="1594844274837">
@@ -348,7 +346,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
-          <line>32</line>
+          <line>25</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">

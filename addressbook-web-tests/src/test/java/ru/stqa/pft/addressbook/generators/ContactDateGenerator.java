@@ -6,9 +6,7 @@ import com.beust.jcommander.ParameterException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
-import org.jetbrains.annotations.NotNull;
 import ru.stqa.pft.addressbook.model.ContactDate;
-import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -75,7 +73,7 @@ public class ContactDateGenerator {
     private void saveSCV(List<ContactDate> contacts, File file) throws IOException {
         try (Writer writer = new FileWriter(file);) {
             for (ContactDate contact : contacts) {
-                writer.write(String.format("%s,%s,%s\n", contact.getLastname(), contact.getMiddlename(), contact.getFistname()));
+                writer.write(String.format("%s,%s,%s\n", contact.getLastname(), contact.getMiddlename(), contact.getFirstname()));
             }
         }
         }

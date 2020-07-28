@@ -1,20 +1,13 @@
 package ru.stqa.pft.addressbook.appmanager;
 
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactDate;
 import ru.stqa.pft.addressbook.model.Contacts;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ContactHelper extends HelperBase {
 
@@ -27,7 +20,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fiiContactForm(ContactDate contactDate,boolean creation) {
-        type(By.name("firstname"), contactDate.getFistname());
+        type(By.name("firstname"), contactDate.getFirstname());
         type(By.name("middlename"), contactDate.getMiddlename());
         type(By.name("lastname"), contactDate.getLastname());
         attach(By.name("photo"),contactDate.getPhoto());
