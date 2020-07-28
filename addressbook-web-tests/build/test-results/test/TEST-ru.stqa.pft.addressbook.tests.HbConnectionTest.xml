@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.HbConnectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-28T18:55:53" hostname="ПЁС-ПК" time="1.204">
+  <properties/>
+  <testcase name="testHbConnection" classname="ru.stqa.pft.addressbook.tests.HbConnectionTest" time="1.204"/>
+  <system-out><![CDATA[21:55:45,464 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+21:55:45,464 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+21:55:45,464 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Project/11/java_newpft/addressbook-web-tests/build/resources/test/logback.xml]
+21:55:45,823 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+21:55:45,870 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Using current interpretation time, i.e. now, as time reference.
+21:55:45,870 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Adding property to the context with key="bySecond" and value="20200728T215545" to the LOCAL scope
+21:55:45,870 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+21:55:45,901 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+21:55:45,979 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@9:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][appender][immediateFlush]]
+21:55:45,979 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+21:55:46,041 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20200728T215545.log]
+21:55:46,041 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+21:55:46,041 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+21:55:46,057 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+21:55:46,057 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+21:55:46,057 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+21:55:46,057 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+21:55:46,057 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+21:55:46,057 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@62e5c1bf - Registering current configuration as safe fallback point
+
+21:55:46.354 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.18.Final
+21:55:48.680 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+21:55:49.319 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+21:55:49.397 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook?serverTimezone=UTC]
+21:55:49.397 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=}
+21:55:49.397 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:55:49.413 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+21:55:50.085 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+21:55:53.641 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@e2efed] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:55:53.828 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: select groupdate0_.group_id as group_id1_0_, groupdate0_.group_footer as group_fo2_0_, groupdate0_.group_header as group_he3_0_, groupdate0_.group_name as group_na4_0_ from group_list groupdate0_
+GroupDate{name='test 1', id='91'}
+GroupDate{name='test 2', id='92'}
+GroupDate{name='test 3', id='93'}
+GroupDate{name='test 0', id='214'}
+GroupDate{name='test 0', id='217'}
+GroupDate{name='test 1', id='218'}
+GroupDate{name='test 2', id='219'}
+GroupDate{name='test 0', id='220'}
+GroupDate{name='test 1', id='221'}
+GroupDate{name='test 2', id='222'}
+GroupDate{name='test 0', id='223'}
+GroupDate{name='test 1', id='224'}
+GroupDate{name='test 2', id='225'}
+GroupDate{name='test 0', id='226'}
+GroupDate{name='test 1', id='227'}
+GroupDate{name='test 2', id='228'}
+GroupDate{name='test 0', id='229'}
+GroupDate{name='test 1', id='230'}
+GroupDate{name='test 2', id='231'}
+GroupDate{name='test 0', id='232'}
+GroupDate{name='test 1', id='233'}
+GroupDate{name='test 2', id='234'}
+GroupDate{name='test 0', id='235'}
+GroupDate{name='test 1', id='236'}
+GroupDate{name='test 2', id='237'}
+GroupDate{name='test 0', id='238'}
+GroupDate{name='test 1', id='239'}
+GroupDate{name='test 2', id='240'}
+GroupDate{name='test 0', id='241'}
+GroupDate{name='test 1', id='242'}
+GroupDate{name='test 2', id='243'}
+GroupDate{name='test 0', id='244'}
+GroupDate{name='test 1', id='245'}
+GroupDate{name='test 2', id='246'}
+GroupDate{name='test 0', id='247'}
+GroupDate{name='test 1', id='248'}
+GroupDate{name='test 2', id='249'}
+GroupDate{name='test 0', id='250'}
+GroupDate{name='test 1', id='251'}
+GroupDate{name='test 2', id='252'}
+GroupDate{name='Test 0', id='253'}
+GroupDate{name='Test 1', id='254'}
+GroupDate{name='Test 2', id='255'}
+GroupDate{name='Test 3', id='256'}
+GroupDate{name='Test 4', id='257'}
+GroupDate{name='Test 5', id='258'}
+GroupDate{name='Test 6', id='259'}
+GroupDate{name='Test 7', id='260'}
+GroupDate{name='Test 8', id='261'}
+GroupDate{name='Test 9', id='262'}
+GroupDate{name='Test 10', id='263'}
+GroupDate{name='Test 11', id='264'}
+GroupDate{name='Test 12', id='265'}
+GroupDate{name='Test 13', id='266'}
+GroupDate{name='Test 14', id='267'}
+GroupDate{name='Test 15', id='268'}
+GroupDate{name='Test 16', id='269'}
+GroupDate{name='Test 17', id='270'}
+GroupDate{name='Test 18', id='271'}
+GroupDate{name='Test 19', id='272'}
+GroupDate{name='Test 0', id='273'}
+GroupDate{name='Test 1', id='274'}
+GroupDate{name='Test 0', id='275'}
+GroupDate{name='Test 1', id='276'}
+GroupDate{name='Test 0', id='277'}
+GroupDate{name='Test 1', id='278'}
+GroupDate{name='Test 0', id='279'}
+GroupDate{name='Test 1', id='280'}
+GroupDate{name='Test 0', id='281'}
+GroupDate{name='Test 1', id='282'}
+GroupDate{name='Test 0', id='283'}
+GroupDate{name='Test 1', id='284'}
+GroupDate{name='Test 0', id='285'}
+GroupDate{name='test 0', id='286'}
+GroupDate{name='test 1', id='287'}
+GroupDate{name='test 2', id='288'}
+GroupDate{name='test 0', id='289'}
+GroupDate{name='test 1', id='290'}
+GroupDate{name='test 2', id='291'}
+GroupDate{name='test 0', id='292'}
+GroupDate{name='test 1', id='293'}
+GroupDate{name='test 2', id='294'}
+]]></system-out>
+  <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+]]></system-err>
+</testsuite>
