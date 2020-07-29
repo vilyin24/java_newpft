@@ -24,24 +24,35 @@ public class HbConnectionTest {
                 .build();
         try {
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            StandardServiceRegistryBuilder.destroy( registry );
+            StandardServiceRegistryBuilder.destroy(registry);
         }
     }
+
     @Test
-    public void testHbConnection(){
+    public void testHbContactConnection() {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        List<ContactDate> result = session.createQuery( "from ContactDate where deprecated ='0000-00-00'" ).list();
-        for ( ContactDate contact : result ) {
+        List<ContactDate> result = session.createQuery("from ContactDate where deprecated ='0000-00-00'").list();
+        session.getTransaction().commit();
+        session.close();
+        for (ContactDate contact : result) {
             System.out.println(contact);
+        }
+
+    }
+
+    @Test
+    public void testHbGroupConnection() {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        List<GroupDate> result = session.createQuery("from GroupDate").list();
+        for (GroupDate group : result) {
+            System.out.println(group);
         }
         session.getTransaction().commit();
         session.close();
 
     }
-
-    }
-
+}

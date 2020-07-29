@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.717s</div>
+<div class="counter">0.437s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,8 +81,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testHbConnection</td>
-<td class="success">0.717s</td>
+<td class="success">testHbContactConnection</td>
+<td class="success">0.437s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,116 +90,47 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>00:22:03,172 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-00:22:03,172 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-00:22:03,172 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Project/11/java_newpft/addressbook-web-tests/build/resources/test/logback.xml]
-00:22:03,287 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-00:22:03,334 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Using current interpretation time, i.e. now, as time reference.
-00:22:03,336 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Adding property to the context with key=&quot;bySecond&quot; and value=&quot;20200729T002203&quot; to the LOCAL scope
-00:22:03,337 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
-00:22:03,350 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
-00:22:03,375 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@9:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][appender][immediateFlush]]
-00:22:03,376 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-00:22:03,422 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20200729T002203.log]
-00:22:03,424 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-00:22:03,426 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-00:22:03,437 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-00:22:03,438 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-00:22:03,438 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
-00:22:03,439 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-00:22:03,439 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-00:22:03,440 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@27c3dc44 - Registering current configuration as safe fallback point
+<pre>00:26:15,284 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+00:26:15,285 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+00:26:15,285 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Project/11/java_newpft/addressbook-web-tests/build/resources/test/logback.xml]
+00:26:15,365 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+00:26:15,374 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Using current interpretation time, i.e. now, as time reference.
+00:26:15,375 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Adding property to the context with key=&quot;bySecond&quot; and value=&quot;20200730T002615&quot; to the LOCAL scope
+00:26:15,377 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+00:26:15,386 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+00:26:15,417 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@9:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][appender][immediateFlush]]
+00:26:15,418 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+00:26:15,458 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20200730T002615.log]
+00:26:15,461 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+00:26:15,462 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+00:26:15,471 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+00:26:15,472 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+00:26:15,472 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+00:26:15,473 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+00:26:15,473 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+00:26:15,474 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@162f383b - Registering current configuration as safe fallback point
 
-00:22:03.519 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.18.Final
-00:22:04.325 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-00:22:04.625 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-00:22:04.635 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook?serverTimezone=UTC]
-00:22:04.636 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=}
-00:22:04.636 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-00:22:04.642 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
-00:22:04.934 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-00:22:06.379 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2ceb6e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-00:22:06.450 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:26:15.553 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.18.Final
+00:26:16.337 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+00:26:16.701 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:26:16.713 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook?serverTimezone=UTC]
+00:26:16.713 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=}
+00:26:16.713 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+00:26:16.719 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+00:26:16.996 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+00:26:18.383 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@69da6a95] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+00:26:18.492 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 Hibernate: select contactdat0_.id as id1_0_, contactdat0_.email as email2_0_, contactdat0_.email2 as email3_0_, contactdat0_.email3 as email4_0_, contactdat0_.firstname as firstnam5_0_, contactdat0_.home as home6_0_, contactdat0_.lastname as lastname7_0_, contactdat0_.middlename as middlena8_0_, contactdat0_.mobile as mobile9_0_, contactdat0_.photo as photo10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_ where deprecated='0000-00-00'
 ContactDate{id=127, firstname='1', middlename='1', lastname='1'}
-ContactDate{id=133, firstname='1', middlename='2', lastname='1'}
-ContactDate{id=134, firstname='1', middlename='2', lastname='1'}
-ContactDate{id=135, firstname='1', middlename='2', lastname='1'}
-ContactDate{id=136, firstname='1', middlename='2', lastname='1'}
-ContactDate{id=137, firstname='1', middlename='2', lastname='test1'}
-ContactDate{id=138, firstname='1', middlename='2', lastname='test2'}
-ContactDate{id=139, firstname='1', middlename='2', lastname='test3'}
-ContactDate{id=140, firstname='1', middlename='2', lastname='test1'}
-ContactDate{id=141, firstname='1', middlename='2', lastname='test2'}
 ContactDate{id=142, firstname='1', middlename='2', lastname='test3'}
 ContactDate{id=143, firstname='midlename 1', middlename='firstname 1', lastname='lastname 1'}
 ContactDate{id=144, firstname='midlename 2', middlename='firstname 2', lastname='lastname 2'}
-ContactDate{id=145, firstname='midlename 3', middlename='firstname 3', lastname='lastname 3'}
-ContactDate{id=146, firstname='', middlename='', lastname=''}
-ContactDate{id=147, firstname='firstname 1', middlename='midlename 1', lastname='lastname 1'}
-ContactDate{id=148, firstname='firstname 2', middlename='midlename 2', lastname='lastname 2'}
 ContactDate{id=149, firstname='firstname 3', middlename='midlename 3', lastname='lastname 3'}
-ContactDate{id=150, firstname='firstname 1', middlename='midlename 1', lastname='lastname 1'}
-ContactDate{id=151, firstname='firstname 3', middlename='midlename 3', lastname='lastname 3'}
-ContactDate{id=153, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=154, firstname='1', middlename='2', lastname='1'}
 ContactDate{id=155, firstname='first 3', middlename='middle 3', lastname='last 3'}
-ContactDate{id=156, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=157, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=158, firstname='first 2', middlename='middle 2', lastname='last 2'}
 ContactDate{id=159, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=160, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=161, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=162, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=163, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=164, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=165, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=166, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=167, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=168, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=169, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=170, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=171, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=172, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=173, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=174, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=175, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=176, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=177, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=178, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=179, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=180, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=181, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=182, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=183, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=184, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=185, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=186, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=187, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=188, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=189, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=190, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=191, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=192, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=193, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=194, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=195, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=196, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=197, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=198, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=199, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=200, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=201, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=202, firstname='first 1', middlename='middle 1', lastname='last 1'}
 ContactDate{id=203, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=204, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=205, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=206, firstname='first 2', middlename='middle 2', lastname='last 2'}
 ContactDate{id=207, firstname='first 0', middlename='middle 0', lastname='last 0'}
 ContactDate{id=208, firstname='first 1', middlename='middle 1', lastname='last 1'}
-ContactDate{id=209, firstname='first 2', middlename='middle 2', lastname='last 2'}
-ContactDate{id=210, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=211, firstname='first 1', middlename='middle 1', lastname='last 1'}
 ContactDate{id=212, firstname='first 2', middlename='middle 2', lastname='last 2'}
 </pre>
 </span>
@@ -219,7 +150,7 @@ ContactDate{id=212, firstname='first 2', middlename='middle 2', lastname='last 2
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.4</a> at 29.07.2020 0:22:07</p>
+<a href="http://www.gradle.org">Gradle 6.4</a> at 30.07.2020 0:26:19</p>
 </div>
 </div>
 </body>

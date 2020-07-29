@@ -30,10 +30,10 @@
         <property name="hbm2ddl.auto">validate</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="ru.stqa.pft.addressbook.model.GroupDate"/>
-        <mapping class="ru.stqa.pft.addressbook.model.ContactDate"/>
+         <mapping class="ru.stqa.pft.addressbook.model.GroupDate"/>
+         <mapping class="ru.stqa.pft.addressbook.model.ContactDate"/>
 
 
-    </session-factory>
+     </session-factory>
 
-</hibernate-configuration>
+ </hibernate-configuration>

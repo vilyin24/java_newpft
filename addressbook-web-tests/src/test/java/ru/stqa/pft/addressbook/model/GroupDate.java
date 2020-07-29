@@ -33,33 +33,10 @@ public class GroupDate {
     @Column(name = "group_id")
     private  int id = Integer.MAX_VALUE;
 
-
-    @Override
-    public String toString() {
-        return "GroupDate{" +
-                "name='" + name + '\'' +
-                ", id='" + id + '\'' +
-                '}';
-    }
-
     public int  getId() {
         return id;
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GroupDate groupDate = (GroupDate) o;
-        return id == groupDate.id &&
-                Objects.equals(name, groupDate.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, id);
-    }
 
     public String getName() {
         return name;
@@ -94,4 +71,33 @@ public class GroupDate {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupDate groupDate = (GroupDate) o;
+        return id == groupDate.id &&
+                Objects.equals(name, groupDate.name) &&
+                Objects.equals(header, groupDate.header) &&
+                Objects.equals(footer, groupDate.footer);
     }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (header != null ? header.hashCode() : 0);
+        result = 31 * result + (footer != null ? footer.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupDate{" +
+                "name='" + name + '\'' +
+                ", header='" + header + '\'' +
+                ", footer='" + footer + '\'' +
+                ", id=" + id +
+                '}';
+    }
+}
