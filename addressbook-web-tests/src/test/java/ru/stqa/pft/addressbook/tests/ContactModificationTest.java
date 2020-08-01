@@ -13,19 +13,20 @@ public class ContactModificationTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        app.goTo().contactPage();
-        if (app.getcontact().all().size() == 0) {
+        if(app.db().contacts().size() == 0) {
+            app.goTo().contactPage();
             app.getcontact().create(new ContactDate().withFistname("1").withMiddlename("2").withGroup("1"),true);
+          }
         }
-    }
     @Test
     public void testContactModification() throws Exception {
-        Contacts before = app.getcontact().all();
+        Contacts before = app.db().contacts();
         ContactDate modifiedContact = before.iterator().next();
 
         ContactDate contact =new ContactDate().withtId(modifiedContact.getId()).withFistname("1").withLastname("1").withMiddlename("2").withGroup("1");
+        app.goTo().contactPage();
         app.getcontact().modify(contact);
-        Contacts after = app.getcontact().all();
+        Contacts after = app.db().contacts();
         assertEquals(after.size(),before.size() );
 
         assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));

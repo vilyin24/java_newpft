@@ -23,7 +23,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("firstname"), contactDate.getFirstname());
         type(By.name("middlename"), contactDate.getMiddlename());
         type(By.name("lastname"), contactDate.getLastname());
-        attach(By.name("photo"),contactDate.getPhoto());
+        //attach(By.name("photo"),contactDate.getPhoto());
 
         if (creation) {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());

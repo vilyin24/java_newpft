@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.GroupDelitionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-01T19:18:19" hostname="ПЁС-ПК" time="1.165">
+  <properties/>
+  <testcase name="testGroupDelition" classname="ru.stqa.pft.addressbook.tests.GroupDelitionTests" time="1.165"/>
+  <system-out><![CDATA[22:18:18.266 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testtestGroupDelitionwith parameters[]
+Hibernate: select groupdate0_.group_id as group_id1_1_, groupdate0_.group_footer as group_fo2_1_, groupdate0_.group_header as group_he3_1_, groupdate0_.group_name as group_na4_1_ from group_list groupdate0_
+Hibernate: select groupdate0_.group_id as group_id1_1_, groupdate0_.group_footer as group_fo2_1_, groupdate0_.group_header as group_he3_1_, groupdate0_.group_name as group_na4_1_ from group_list groupdate0_
+22:18:21.109 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestGroupDelition
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

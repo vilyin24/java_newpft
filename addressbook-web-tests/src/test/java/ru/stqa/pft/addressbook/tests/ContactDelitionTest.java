@@ -19,10 +19,10 @@ public class ContactDelitionTest extends TestBase {
   }
   @Test
   public void contactDelitionTests() throws Exception {
-    Contacts before = app.getcontact().all();
+    Contacts before = app.db().contacts();
     ContactDate delitedContact = before.iterator().next();
     app.getcontact().delete(delitedContact);
-    Contacts after = app.getcontact().all();
+    Contacts after = app.db().contacts();
     assertEquals(after.size(), before.size()-1);
     assertThat(after, equalTo(before.without(delitedContact)));
 

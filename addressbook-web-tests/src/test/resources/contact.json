@@ -1,17 +1,7 @@
 [
   {
-    "fistname": "first 0",
+    "firstname": "first 0",
     "middlename": "middle 0",
     "lastname": "last 0"
-  },
-  {
-    "fistname": "first 1",
-    "middlename": "middle 1",
-    "lastname": "last 1"
-  },
-  {
-    "fistname": "first 2",
-    "middlename": "middle 2",
-    "lastname": "last 2"
   }
 ]

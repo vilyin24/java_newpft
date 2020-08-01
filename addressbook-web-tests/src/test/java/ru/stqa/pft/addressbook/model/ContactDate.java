@@ -160,12 +160,14 @@ public class ContactDate {
         if (o == null || getClass() != o.getClass()) return false;
         ContactDate that = (ContactDate) o;
         return id == that.id &&
+                Objects.equals(firstname, that.firstname) &&
+                Objects.equals(middlename, that.middlename) &&
                 Objects.equals(lastname, that.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(lastname, id);
+        return Objects.hash(id, firstname, middlename, lastname);
     }
 
     public  ContactDate withFistname(String firstname) {

@@ -26,11 +26,11 @@ public class GroupDelitionTests extends TestBase {
   @Test
   public void testGroupDelition() throws Exception {
 
-     Groups before = app.group().all();
+     Groups before = app.db().groups();
      GroupDate delitedGroup = before.iterator().next();
      app.group().delete(delitedGroup);
     assertThat((app.group().count()),equalTo(before.size()-1));
-    Groups after = app.group().all();
+    Groups after = app.db().groups();
     assertThat(after, equalTo(before.without(delitedGroup)));
 
   }
