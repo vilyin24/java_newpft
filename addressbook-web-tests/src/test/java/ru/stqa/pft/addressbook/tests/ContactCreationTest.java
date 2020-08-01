@@ -56,12 +56,13 @@ public class ContactCreationTest extends TestBase{
      //File photo = new File("src/test/java/ru/stqa/pft/addressbook/resources/1.png");
       app.goTo().contactPage();
       Contacts before = app.db().contacts();
-      app.getcontact().create(contact,false);
+      app.contact().create(contact,false);
       Contacts  after = app.db().contacts();
       assertThat(after.size(),equalTo(before.size() + 1));
 
       assertThat(after, equalTo(
               before.withAdded(contact.withtId(after.stream().mapToInt((g) ->g.getId()).max().getAsInt()))));
+      verifyContactListInUI();
 
   }
 

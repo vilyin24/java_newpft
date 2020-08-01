@@ -13,19 +13,19 @@ public class ContactDelitionTest extends TestBase {
   @BeforeMethod
   public void ensurePreconditions() {
     app.goTo().contactPage();
-    if (app.getcontact().all().size() == 0) {
-      app.getcontact().create(new ContactDate().withFistname("1").withLastname("1").withMiddlename("2").withGroup("1"), true);
+    if (app.contact().all().size() == 0) {
+      app.contact().create(new ContactDate().withFistname("1").withLastname("1").withMiddlename("2").withGroup("1"), true);
     }
   }
   @Test
   public void contactDelitionTests() throws Exception {
     Contacts before = app.db().contacts();
     ContactDate delitedContact = before.iterator().next();
-    app.getcontact().delete(delitedContact);
+    app.contact().delete(delitedContact);
     Contacts after = app.db().contacts();
     assertEquals(after.size(), before.size()-1);
     assertThat(after, equalTo(before.without(delitedContact)));
-
+    verifyContactListInUI();
   }
 
 }
