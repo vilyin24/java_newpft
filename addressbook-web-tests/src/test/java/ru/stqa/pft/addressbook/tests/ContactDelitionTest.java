@@ -14,7 +14,7 @@ public class ContactDelitionTest extends TestBase {
   public void ensurePreconditions() {
     app.goTo().contactPage();
     if (app.contact().all().size() == 0) {
-      app.contact().create(new ContactDate().withFistname("1").withLastname("1").withMiddlename("2").withGroup("1"), true);
+  app.contact().create(new ContactDate().withFistname("1").withLastname("1").withMiddlename("2"), true);
     }
   }
   @Test

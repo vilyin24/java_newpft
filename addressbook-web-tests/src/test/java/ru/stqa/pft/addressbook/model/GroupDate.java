@@ -28,6 +28,13 @@ public class GroupDate {
     @Type( type = "text")
     private  String footer;
 
+    public Set<ContactDate> getContacts() {
+        return contacts;
+    }
+
+    @ManyToMany(mappedBy = "groups")
+    private Set<ContactDate> contacts = new HashSet<ContactDate>();
+
     @XStreamOmitField
     @Id
     @Column(name = "group_id")

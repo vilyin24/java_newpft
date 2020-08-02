@@ -39,6 +39,7 @@ public class HbConnectionTest {
         session.close();
         for (ContactDate contact : result) {
             System.out.println(contact);
+            System.out.println(contact.getGroups());
         }
 
     }
