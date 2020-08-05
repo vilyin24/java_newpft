@@ -221,4 +221,9 @@ public class ContactDate {
         return lastname;
     }
 
+
+    public ContactDate inGroup(GroupDate group) {
+        groups.add(group);
+        return this;
+    }
 }

@@ -6,6 +6,7 @@ import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.ContactDate;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -54,9 +55,10 @@ public class ContactCreationTest extends TestBase{
   public void testContactCreation(ContactDate contact) throws Exception {
     //String []names = new String[] {"test1", "test2","test3"};
      //File photo = new File("src/test/java/ru/stqa/pft/addressbook/resources/1.png");
+      Groups groups = app.db().groups();
       app.goTo().contactPage();
       Contacts before = app.db().contacts();
-      app.contact().create(contact,false);
+      app.contact().create(contact.inGroup(groups.iterator().next()));
       Contacts  after = app.db().contacts();
       assertThat(after.size(),equalTo(before.size() + 1));
 

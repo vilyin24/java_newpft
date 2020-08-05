@@ -15,7 +15,7 @@ public class ContactModificationTest extends TestBase {
     public void ensurePreconditions() {
         if(app.db().contacts().size() == 0) {
             app.goTo().contactPage();
-      //      app.contact().create(new ContactDate().withFistname("1").withMiddlename("2").withGroup("1"),true);
+      app.contact().create(new ContactDate().withFistname("1").withMiddlename("2"));
           }
         }
     @Test

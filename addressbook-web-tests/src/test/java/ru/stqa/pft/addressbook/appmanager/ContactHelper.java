@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactDate;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.util.List;
 
@@ -88,9 +89,9 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public void create(ContactDate contact, boolean b) {
+    public void create(ContactDate contact) {
         initContact();
-        fiiContactForm(contact,false);
+        fiiContactForm(contact,true);
         sumbitContactCreation();
         returnToContactPage();
     }
@@ -133,6 +134,11 @@ public class ContactHelper extends HelperBase {
         closeAlertForWindowsContact();
         returnToContactPage();
     }
+
+    public void submitContactAddGroup(String group) {
+        click((By.name("to_group" + group)));
+    }
+
 }
 
 

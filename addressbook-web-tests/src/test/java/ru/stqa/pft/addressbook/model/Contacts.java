@@ -40,4 +40,7 @@ public class Contacts extends ForwardingSet<ContactDate> {
         contacts.remove(contact);
         return  contacts;
     }
+
+
 }
+
