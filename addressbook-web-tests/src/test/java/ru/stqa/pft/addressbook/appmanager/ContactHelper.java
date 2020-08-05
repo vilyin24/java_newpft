@@ -75,6 +75,34 @@ public class ContactHelper extends HelperBase {
                withEmail(email).withEmail2(email2).withEmail3(email3);
     }
 
+    public boolean verifyContactInGroup(ContactDate contact, GroupDate group) {
+        boolean sing = false;
+        for(GroupDate g : contact.getGroups()) {
+            if(group.getId() == g.getId()) {
+                sing =  true;
+                break;
+            } else {
+                sing = false;
+            }
+        }
+        return sing;
+    }
+    public void addInGroup(int id, String group) {
+        selectContactById(id);
+        selectGroupForAdd(group);
+        click(By.name("add"));
+    }
+    private void selectGroupForAdd(String group) {
+        new Select(wd.findElement(By.cssSelector("div.right > select"))).selectByVisibleText(group);
+    }
+    public void removeOfGroup(int contactId, int groupId) {
+        selectGroupForDisplayById(groupId);
+        selectContactById(contactId);
+        click(By.name("remove"));
+    }
+    private void selectGroupForDisplayById(int id) {
+        new Select(wd.findElement(By.cssSelector("#right > select:nth-child(1)"))).selectByValue(String.format("%s", id));
+    }
 
     public void ininContactModificationByid(int  id) {
         WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value ='%s']",id)));
