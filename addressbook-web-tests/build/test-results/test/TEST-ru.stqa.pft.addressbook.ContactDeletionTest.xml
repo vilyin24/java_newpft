@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-24T20:21:05" hostname="DESKTOP-IS50UII" time="0.586">
+  <properties/>
+  <testcase name="testContactDeletion" classname="ru.stqa.pft.addressbook.ContactDeletionTest" time="0.586"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1606249260746	geckodriver	INFO	Listening on 127.0.0.1:40781
+1606249262058	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Xiaomi\\AppData\\Local\\Temp\\rust_mozprofilecw08sx"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606249264245	Marionette	INFO	Listening on port 61163
+1606249264700	Marionette	WARN	TLS certificate errors will be ignored for this session
+ноя 24, 2020 11:21:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1606249266296	Marionette	INFO	Stopped listening on port 61163
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+]]></system-err>
+</testsuite>
