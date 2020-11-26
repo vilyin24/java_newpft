@@ -4,46 +4,53 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
-public class ContactHelper {
-    FirefoxDriver wd;
+public class ContactHelper extends HelperBase {
+
 
     public ContactHelper(FirefoxDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
-
     public void sumbitContactCreation() {
-      wd.findElement(By.name("submit")).click();
+        click(By.name("submit"));
     }
 
     public void fiiContactForm(ContactDate contactDate) {
-      wd.findElement(By.name("firstname")).click();
-      wd.findElement(By.name("firstname")).clear();
-      wd.findElement(By.name("firstname")).sendKeys(contactDate.getFistname());
-      wd.findElement(By.name("middlename")).click();
-      wd.findElement(By.name("middlename")).clear();
-      wd.findElement(By.name("middlename")).sendKeys(contactDate.getMiddlename());
-      wd.findElement(By.name("lastname")).click();
-      wd.findElement(By.name("lastname")).clear();
-      wd.findElement(By.name("lastname")).sendKeys(contactDate.getLastname());
+        type(By.name("firstname"), contactDate.getFistname());
+        type(By.name("middlename"), contactDate.getMiddlename());
+        type(By.name("lastname"), contactDate.getLastname());
+    }
+
+    private void type(By locator, String text) {
+        click(locator);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
     }
 
     public void returnContactPage() {
-      wd.findElement(By.linkText("home")).click();
+        click(By.linkText("home"));
     }
 
     public void initContact() {
-      wd.findElement(By.linkText("add new")).click();
+        click(By.linkText("add new"));
     }
 
     public void deleteSelectedContact() {
-      wd.findElement(By.xpath("//input[@value='Delete']")).click();
+        click(By.xpath("//input[@value='Delete']"));
     }
 
     public void selectContact() {
-        wd.findElement(By.name("selected[]")).click();
+        click(By.name("selected[]"));
     }
 
     public void closeAlertForWindowsContact() {
       wd.switchTo().alert().accept();
+    }
+
+    public void initContactModification() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void sumbitContactModification() {
+        click(By.name("update"));
     }
 }

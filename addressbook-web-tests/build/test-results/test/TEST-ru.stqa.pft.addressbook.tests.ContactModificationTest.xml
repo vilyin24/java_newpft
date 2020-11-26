@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.addressbook.tests.GroupDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-25T21:40:45" hostname="DESKTOP-IS50UII" time="1.138">
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-26T19:56:41" hostname="DESKTOP-IS50UII" time="1.66">
   <properties/>
-  <testcase name="testGroupDeletion" classname="ru.stqa.pft.addressbook.tests.GroupDeletionTest" time="1.138"/>
+  <testcase name="testContactModification" classname="ru.stqa.pft.addressbook.tests.ContactModificationTest" time="1.66"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1606340438599	geckodriver	INFO	Listening on 127.0.0.1:30047
-1606340440175	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Xiaomi\\AppData\\Local\\Temp\\rust_mozprofileSAhMgM"
+1606420596730	geckodriver	INFO	Listening on 127.0.0.1:6108
+1606420598109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Xiaomi\\AppData\\Local\\Temp\\rust_mozprofileERVYnt"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1606340443579	Marionette	INFO	Listening on port 58891
-1606340443923	Marionette	WARN	TLS certificate errors will be ignored for this session
-ноя 26, 2020 12:40:44 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1606420600492	Marionette	INFO	Listening on port 52270
+1606420600739	Marionette	WARN	TLS certificate errors will be ignored for this session
+ноя 26, 2020 10:56:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1606340446375	Marionette	INFO	Stopped listening on port 58891
+1606420603173	Marionette	INFO	Stopped listening on port 52270
 JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
