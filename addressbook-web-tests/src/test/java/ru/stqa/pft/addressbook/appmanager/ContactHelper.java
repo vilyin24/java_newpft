@@ -1,29 +1,34 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
 public class ContactHelper extends HelperBase {
 
 
-    public ContactHelper(FirefoxDriver wd) {
+    public ContactHelper(WebDriver wd) {
         super(wd);
     }
     public void sumbitContactCreation() {
         click(By.name("submit"));
     }
 
-    public void fiiContactForm(ContactDate contactDate) {
-        type(By.name("firstname"), contactDate.getFistname());
-        type(By.name("middlename"), contactDate.getMiddlename());
-        type(By.name("lastname"), contactDate.getLastname());
-    }
+    public void fiiContactForm(ContactDate contactDate, boolean creation) {
+        type(contactDate.getFistname(), By.name("firstname"));
+        type(contactDate.getMiddlename(), By.name("middlename"));
+        type(contactDate.getLastname(), By.name("lastname"));
 
-    private void type(By locator, String text) {
-        click(locator);
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+        if(creation){
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
+        }
+        else {
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
+        }
     }
 
     public void returnContactPage() {

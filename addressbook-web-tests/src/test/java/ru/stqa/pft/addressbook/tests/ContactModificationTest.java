@@ -11,7 +11,7 @@ public class ContactModificationTest extends TestBase{
         app.getNavigationHelper().goToContactPage();
         app.getContactHelper().selectContact();
         app.getContactHelper().initContactModification();
-        app.getContactHelper().fiiContactForm(new ContactDate("55","44","22"));
+        app.getContactHelper().fiiContactForm(new ContactDate("55","44","22",null),false);
         app.getContactHelper().sumbitContactModification();
         app.getGroupHelper().returnGroupPage();
     }
