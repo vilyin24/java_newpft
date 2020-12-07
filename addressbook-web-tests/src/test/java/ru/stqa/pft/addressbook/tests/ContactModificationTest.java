@@ -9,6 +9,9 @@ public class ContactModificationTest extends TestBase{
     @Test
     public void testContactModification(){
         app.getNavigationHelper().goToContactPage();
+        if(!app.getContactHelper().isThereAContact()){
+            app.getContactHelper().createContact(new ContactDate("test1",null,null,"test1"));
+        }
         app.getContactHelper().selectContact();
         app.getContactHelper().initContactModification();
         app.getContactHelper().fiiContactForm(new ContactDate("55","44","22",null),false);

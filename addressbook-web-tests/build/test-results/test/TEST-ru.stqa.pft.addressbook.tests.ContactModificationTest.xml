@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.addressbook.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-06T20:20:49" hostname="DESKTOP-IS50UII" time="11.969">
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-07T21:10:43" hostname="DESKTOP-IS50UII" time="34.719">
   <properties/>
-  <testcase name="testContactModification" classname="ru.stqa.pft.addressbook.tests.ContactModificationTest" time="11.969"/>
+  <testcase name="testContactModification" classname="ru.stqa.pft.addressbook.tests.ContactModificationTest" time="34.719"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 46262
+Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 1404
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1607286046.489][WARNING]: This version of ChromeDriver has not been tested with Chrome version 87.
-дек 06, 2020 11:20:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1607375441.303][WARNING]: This version of ChromeDriver has not been tested with Chrome version 87.
+дек 08, 2020 12:10:43 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

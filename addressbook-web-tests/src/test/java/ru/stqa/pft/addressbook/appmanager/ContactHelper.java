@@ -58,4 +58,15 @@ public class ContactHelper extends HelperBase {
     public void sumbitContactModification() {
         click(By.name("update"));
     }
+
+    public void createContact(ContactDate contact) {
+        initContact();
+        fiiContactForm(contact,true);
+        sumbitContactCreation();
+        returnContactPage();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
+    }
 }
