@@ -5,22 +5,30 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactDate;
 import ru.stqa.pft.addressbook.model.GroupDate;
 
+import java.util.HashSet;
+import java.util.List;
+
 public class ContactModificationTest extends TestBase{
 
     @Test
     public void testContactModification(){
         app.getNavigationHelper().goToContactPage();
-        int before =app.getContactHelper().getContactCount();
         if(!app.getContactHelper().isThereAContact()){
-            app.getContactHelper().createContact(new ContactDate("test1",null,null,"test1"));
+            app.getContactHelper().createContact(new ContactDate("test1",null,"3","test1"));
         }
-        app.getContactHelper().selectContact();
-        app.getContactHelper().initContactModification();
-        app.getContactHelper().fiiContactForm(new ContactDate("55","44","22",null),false);
+        List<ContactDate> before = app.getContactHelper().getContactList();
+        app.getContactHelper().selectContact(before.size()- 1);
+        app.getContactHelper().initContactModification(before.size()- 1);
+        ContactDate contact = new ContactDate(before.get(before.size()- 1).getId(),"55","44","4",null);
+        app.getContactHelper().fiiContactForm(contact,false);
         app.getContactHelper().sumbitContactModification();
         app.getContactHelper().returnContactPage();
-        int after =app.getContactHelper().getContactCount();
-        Assert.assertEquals(after,before);
+        List<ContactDate> after = app.getContactHelper().getContactList();
+        Assert.assertEquals(after.size(),before.size());
+
+        before.remove(before.size()-1);
+        before.add(contact);
+        Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
     }
     }
 
