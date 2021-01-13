@@ -3,7 +3,11 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactDate {
-    private final int id;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private  int id;
     private final String fistname;
     private final String middlename;
     private final String lastname;

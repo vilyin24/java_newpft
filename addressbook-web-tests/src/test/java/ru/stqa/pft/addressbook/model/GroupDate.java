@@ -3,12 +3,16 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class GroupDate {
-    private final String id;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private  int id;
     private final String name;
     private final String header;
     private final String footer;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -20,12 +24,19 @@ public class GroupDate {
                 '}';
     }
 
+    public GroupDate(int id, String name, String header, String footer) {
+        this.name = name;
+        this.id = id;
+        this.header = header;
+        this.footer = footer;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GroupDate groupDate = (GroupDate) o;
-        return Objects.equals(id, groupDate.id) &&
+        return id == groupDate.id &&
                 Objects.equals(name, groupDate.name);
     }
 
@@ -34,15 +45,9 @@ public class GroupDate {
         return Objects.hash(id, name);
     }
 
-    public GroupDate(String id, String name, String header, String footer) {
-        this.name = name;
-        this.id = id;
-        this.header = header;
-        this.footer = footer;
-    }
     public GroupDate(String name, String header, String footer) {
             this.name = name;
-            this.id = null;
+            this.id = 0;
             this.header = header;
             this.footer = footer;
         }
