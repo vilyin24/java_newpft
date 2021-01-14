@@ -48,7 +48,7 @@ public class ContactDate {
     }
 
     public ContactDate(String fistname, String middlename, String lastname, String group) {
-        this.id = 0;
+        this.id = Integer.MAX_VALUE;
         this.fistname = fistname;
         this.middlename = middlename;
         this.lastname = lastname;
