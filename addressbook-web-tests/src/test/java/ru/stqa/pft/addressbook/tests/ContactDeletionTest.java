@@ -9,12 +9,15 @@ import java.util.List;
 
 public class ContactDeletionTest extends TestBase {
 
+  @BeforeMethod
+  public void ensurePreconditions() {
+    app.getNavigationHelper().goToContactPage();
+    if (!app.getContactHelper().isThereAContact()) {
+      app.getContactHelper().createContact(new ContactDate("test1", null, null, "test1"));
+    }
+  }
   @Test
   public void testContactDeletion() throws Exception {
-    app.getNavigationHelper().goToContactPage();
-    if(!app.getContactHelper().isThereAContact()){
-      app.getContactHelper().createContact(new ContactDate("test1",null,null,"test1"));
-    }
     List<ContactDate> before = app.getContactHelper().getContactList();
     app.getContactHelper().selectContact(before.size()- 1);
     app.getContactHelper().deleteSelectedContact();

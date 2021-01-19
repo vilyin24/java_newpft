@@ -70,6 +70,13 @@ public class ContactHelper extends HelperBase {
         sumbitContactCreation();
         returnContactPage();
     }
+    public void modifyContact(int index, ContactDate contact) {
+        selectContact(index);
+        initContactModification(index);
+        fiiContactForm(contact,false);
+        sumbitContactModification();
+        returnContactPage();
+    }
 
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));

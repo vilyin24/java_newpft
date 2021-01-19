@@ -26,6 +26,14 @@ public class ContactDate {
     }
 
     @Override
+    public String toString() {
+        return "ContactDate{" +
+                "id=" + id +
+                ", lastname='" + lastname + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -39,16 +47,8 @@ public class ContactDate {
         return Objects.hash(id, lastname);
     }
 
-    @Override
-    public String toString() {
-        return "ContactDate{" +
-                "id=" + id +
-                ", lastname='" + lastname + '\'' +
-                '}';
-    }
-
     public ContactDate(String fistname, String middlename, String lastname, String group) {
-        this.id = Integer.MAX_VALUE;
+        this.id = 0;
         this.fistname = fistname;
         this.middlename = middlename;
         this.lastname = lastname;
