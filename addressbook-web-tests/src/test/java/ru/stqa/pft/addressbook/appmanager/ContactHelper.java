@@ -64,17 +64,23 @@ public class ContactHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void createContact(ContactDate contact) {
+    public void create(ContactDate contact) {
         initContact();
         fiiContactForm(contact,true);
         sumbitContactCreation();
         returnContactPage();
     }
-    public void modifyContact(int index, ContactDate contact) {
+    public void modify(int index, ContactDate contact) {
         selectContact(index);
         initContactModification(index);
         fiiContactForm(contact,false);
         sumbitContactModification();
+        returnContactPage();
+    }
+    public void delete(int index) {
+        selectContact(index);
+        deleteSelectedContact();
+        closeAlertForWindowsContact();
         returnContactPage();
     }
 
@@ -86,15 +92,14 @@ public class ContactHelper extends HelperBase {
       return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<ContactDate> getContactList() {
+    public List<ContactDate> list() {
         List<ContactDate> contacts = new ArrayList<>();
         List <WebElement> elements = wd.findElements(By.name("entry"));
         for(WebElement element: elements){
             List<WebElement> cells = element.findElements(By.tagName("td"));
             int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
             String lastname = cells.get(1).getText();
-            ContactDate contact = new ContactDate(id,null,null,lastname,null);
-            contacts.add(contact);
+            contacts.add(new ContactDate().withId(id).withLastname(lastname));
         }
         return contacts;
     }

@@ -3,26 +3,16 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactDate {
-    public void setId(int id) {
-        this.id = id;
-    }
-
     private  int id;
-    private final String fistname;
-    private final String middlename;
-    private final String lastname;
+    private  String fistname;
+    private  String middlename;
+    private  String lastname;
     private String group;
 
-    public ContactDate(int id,String fistname, String middlename, String lastname,String group) {
-        this.id = id;
-        this.fistname = fistname;
-        this.middlename = middlename;
-        this.lastname = lastname;
-        this.group = group;
-    }
 
     public int getId() {
         return id;
+
     }
 
     @Override
@@ -47,12 +37,30 @@ public class ContactDate {
         return Objects.hash(id, lastname);
     }
 
-    public ContactDate(String fistname, String middlename, String lastname, String group) {
-        this.id = 0;
+
+    public ContactDate withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public ContactDate withFistname(String fistname) {
         this.fistname = fistname;
+        return this;
+    }
+
+    public ContactDate withMiddlename(String middlename) {
         this.middlename = middlename;
+        return this;
+    }
+
+    public ContactDate withLastname(String lastname) {
         this.lastname = lastname;
+        return this;
+    }
+
+    public ContactDate withGroup(String group) {
         this.group = group;
+        return this;
     }
 
     public String getFistname() {

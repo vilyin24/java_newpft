@@ -4,29 +4,27 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactDate;
-import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class ContactModificationTest extends TestBase{
 
     @BeforeMethod
     public void ensurePreconditions() {
-        app.getNavigationHelper().goToContactPage();
-        if (!app.getContactHelper().isThereAContact()) {
-            app.getContactHelper().createContact(new ContactDate("test1", null, null, "test1"));
+        app.goTo().contactPage();
+        if (app.contact().list().size() == 0) {
+            app.contact().create(new ContactDate().withLastname("test1").withGroup("test1"));
         }
     }
 
     @Test
     public void testContactModification(){
-        List<ContactDate> before = app.getContactHelper().getContactList();
+        List<ContactDate> before = app.contact().list();
         int index =before.size()- 1;
-        ContactDate contact = new ContactDate(before.get(index).getId(),"55","44","4",null);
-        app.getContactHelper().modifyContact(index, contact);
-        List<ContactDate> after = app.getContactHelper().getContactList();
+        ContactDate contact = new ContactDate().withId(before.get(index).getId()).withLastname("test1").withFistname("22").withGroup("test1");
+        app.contact().modify(index, contact);
+        List<ContactDate> after = app.contact().list();
         Assert.assertEquals(after.size(),before.size());
 
         before.remove(index);

@@ -3,30 +3,29 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.stqa.pft.addressbook.model.ContactDate;
 import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class GroupModificationTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions(){
-        app.getNavigationHelper().gotoGroupPage();
-        if(!app.getGroupHelper().isThereAGroup()){
-            app.getGroupHelper().createGroup(new GroupDate("test1",null,null));
+        app.goTo().GroupPage();
+        if(app.group().list().size() == 0){
+            app.group().create(new GroupDate().withName("test1"));
         }
     }
 
     @Test
     public void testGroupModification(){
-        List<GroupDate> before = app.getGroupHelper().getGroupList();
+        List<GroupDate> before = app.group().list();
         int index = before.size()-1;
-        GroupDate group = new GroupDate(before.get(index).getId(),"test1", "22", "22");
-        app.getGroupHelper().modifyGroup(index, group);
-        List<GroupDate> after = app.getGroupHelper().getGroupList();
+        GroupDate group = new GroupDate()
+                .withId(before.get(index).getId()).withName("test1").withFooter("22").withHeader("22");
+        app.group().modify(index, group);
+        List<GroupDate> after = app.group().list();
         Assert.assertEquals(after.size(), before.size());
 
         before.remove(index);
