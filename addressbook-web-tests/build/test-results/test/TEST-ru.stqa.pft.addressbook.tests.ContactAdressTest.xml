@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.addressbook.tests.ContactAdressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-10T20:14:20" hostname="DESKTOP-IS50UII" time="0.363">
-  <properties/>
-  <testcase name="testContactAdress" classname="ru.stqa.pft.addressbook.tests.ContactAdressTest" time="0.363"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
