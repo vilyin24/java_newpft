@@ -1,13 +1,20 @@
 package ru.stqa.pft.addressbook.model;
 
+import com.google.gson.annotations.Expose;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.io.File;
 import java.util.Objects;
 
+@XStreamAlias("contact")
 public class  ContactDate {
     private  int id;
+    @Expose
     private  String fistname;
     private  String middlename;
+    @Expose
     private  String lastname;
+    @Expose
     private String group;
     private String homePhone;
     private String mobilePhone;
