@@ -5,7 +5,9 @@ import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
-import org.testng.Assert;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.GroupDate;
 import ru.stqa.pft.addressbook.model.Groups;
@@ -41,7 +43,7 @@ public Iterator<Object[]> validGroupsFromXml() throws IOException {
 }
   @DataProvider
   public Iterator<Object[]> validGroupsFromJson() throws IOException {
-   try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/resources/groups.json")))){
+   try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.json")))){
      String json ="";
      String line = reader.readLine();
 
@@ -65,7 +67,7 @@ public Iterator<Object[]> validGroupsFromXml() throws IOException {
     assertThat(app.group().count(), equalTo(before.size() + 1));
     Groups after = app.group().all();
     assertThat(after, equalTo(before.withAdded(group.withId(after.stream().mapToInt((g) ->g.getId()).max().getAsInt()))));
-  }
+}
   @Test
   public void testBadGroupCreation() throws Exception {
     app.goTo().GroupPage();

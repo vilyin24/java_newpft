@@ -4,8 +4,33 @@ apply plugin: 'java'
 repositories {
     mavenCentral()
 }
+
 test {
     useTestNG()
+}
+
+task testGroups(type: Test) {
+    useTestNG(){
+        suites 'src/test/resources/testng-groups.xml'
+    }
+    if(project.hasProperty('browser')){
+        systemProperty'browser',"${browser}"
+    }
+    if(project.hasProperty('target')){
+        systemProperty'target',"${target}"
+    }
+}
+
+task testContacts(type: Test) {
+    useTestNG(){
+        suites 'src/test/resources/testng-Contacts.xml'
+    }
+    if(project.hasProperty('browser')){
+        systemProperty'browser',"${browser}"
+    }
+    if(project.hasProperty('target')){
+        systemProperty'target',"${target}"
+    }
 }
 dependencies {
     implementation 'org.testng:testng:7.1.0'
@@ -15,4 +40,6 @@ dependencies {
     implementation 'com.beust:jcommander:1.48'
     compile 'com.thoughtworks.xstream:xstream:1.4.8'
     implementation 'com.google.code.gson:gson:2.6.1'
+    implementation 'ch.qos.logback:logback-classic:1.1.5'
 }
+
