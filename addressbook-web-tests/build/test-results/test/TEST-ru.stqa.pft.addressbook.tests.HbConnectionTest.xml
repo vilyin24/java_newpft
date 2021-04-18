@@ -1,80 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.addressbook.tests.HbConnectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-12T19:43:44" hostname="DESKTOP-IS50UII" time="0.208">
+<testsuite name="ru.stqa.pft.addressbook.tests.HbConnectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-14T20:27:54" hostname="DESKTOP-IS50UII" time="0.231">
   <properties/>
-  <testcase name="testHbConnection" classname="ru.stqa.pft.addressbook.tests.HbConnectionTest" time="0.208"/>
-  <system-out><![CDATA[22:43:43,416 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-22:43:43,417 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-22:43:43,417 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Project/JavaAvtomat/2/java_newpft/addressbook-web-tests/build/resources/test/logback.xml]
-22:43:43,466 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-22:43:43,474 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Using current interpretation time, i.e. now, as time reference.
-22:43:43,475 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Adding property to the context with key="bySecond" and value="20210412T224343" to the LOCAL scope
-22:43:43,476 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
-22:43:43,481 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
-22:43:43,497 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][appender][immediateFlush]]
-22:43:43,497 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-22:43:43,524 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20210412T224343.log]
-22:43:43,525 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-22:43:43,526 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-22:43:43,528 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-22:43:43,528 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
-22:43:43,528 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
-22:43:43,529 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-22:43:43,529 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-22:43:43,529 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@690adc2 - Registering current configuration as safe fallback point
+  <testcase name="testHbConnection2" classname="ru.stqa.pft.addressbook.tests.HbConnectionTest" time="0.231"/>
+  <system-out><![CDATA[23:27:52,604 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+23:27:52,605 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+23:27:52,606 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Project/JavaAvtomat/2/java_newpft/addressbook-web-tests/build/resources/test/logback.xml]
+23:27:52,708 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+23:27:52,719 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Using current interpretation time, i.e. now, as time reference.
+23:27:52,720 |-INFO in ch.qos.logback.core.joran.action.TimestampAction - Adding property to the context with key="bySecond" and value="20210414T232752" to the LOCAL scope
+23:27:52,721 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+23:27:52,727 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+23:27:52,748 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][appender][immediateFlush]]
+23:27:52,749 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:27:52,781 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20210414T232752.log]
+23:27:52,783 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:27:52,785 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+23:27:52,787 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:27:52,787 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+23:27:52,787 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+23:27:52,788 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+23:27:52,788 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+23:27:52,788 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1e1a8b19 - Registering current configuration as safe fallback point
 
-22:43:43.617 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.1.1.Final}
-22:43:43.622 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-22:43:43.623 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
-22:43:43.793 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-22:43:43.863 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-22:43:43.867 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook]
-22:43:43.869 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
-22:43:43.869 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-22:43:43.872 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
-22:43:44.103 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-22:43:44.541 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2452d151] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-22:43:44.747 [Test worker] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-Hibernate: select contactdat0_.id as id1_0_, contactdat0_.email as email2_0_, contactdat0_.email2 as email3_0_, contactdat0_.email3 as email4_0_, contactdat0_.firstname as firstnam5_0_, contactdat0_.home as home6_0_, contactdat0_.lastname as lastname7_0_, contactdat0_.middlename as middlena8_0_, contactdat0_.mobile as mobile9_0_, contactdat0_.photo as photo10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_ where deprecated='0000-00-00'
-ContactDate{id=71, firstname='', middlename='', lastname='test1'}
-ContactDate{id=72, firstname='', middlename='', lastname='test1'}
-ContactDate{id=73, firstname='', middlename='', lastname='test2'}
-ContactDate{id=74, firstname='', middlename='', lastname='test3'}
-ContactDate{id=75, firstname='firstname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=76, firstname='firstname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=77, firstname='firstname 3', middlename='', lastname='lastname 3'}
-ContactDate{id=78, firstname='firstname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=79, firstname='firstname 3', middlename='', lastname='lastname 3'}
-ContactDate{id=81, firstname='firstname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=82, firstname='firstname 3', middlename='', lastname='lastname 3'}
-ContactDate{id=83, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=84, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=85, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=86, firstname='fistname 3', middlename='', lastname='lastname 3'}
-ContactDate{id=87, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=88, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=89, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=90, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=91, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=92, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=93, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=94, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=95, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=96, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=97, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=98, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=99, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=100, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=101, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=102, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=103, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=104, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=105, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=106, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=107, firstname='fistname 2', middlename='', lastname='lastname 2'}
-ContactDate{id=108, firstname='first 0', middlename='middle 0', lastname='last 0'}
-ContactDate{id=109, firstname='fistname 0', middlename='', lastname='lastname 0'}
-ContactDate{id=110, firstname='fistname 1', middlename='', lastname='lastname 1'}
-ContactDate{id=111, firstname='fistname 2', middlename='', lastname='lastname 2'}
+23:27:52.946 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.1.1.Final}
+23:27:52.951 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+23:27:52.953 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+23:27:53.318 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+23:27:53.431 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+23:27:53.439 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook]
+23:27:53.439 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
+23:27:53.440 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+23:27:53.443 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+23:27:53.815 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23:27:54.684 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3ce45974] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+23:27:54.901 [Test worker] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: select groupdate0_.group_id as group_id1_1_, groupdate0_.group_footer as group_fo2_1_, groupdate0_.group_header as group_he3_1_, groupdate0_.group_name as group_na4_1_ from group_list groupdate0_
+GroupDate{id='107', name='test1'}
+GroupDate{id='113', name='test1'}
+GroupDate{id='115', name='test1'}
+GroupDate{id='116', name='test 0'}
+GroupDate{id='117', name='test 1'}
+GroupDate{id='118', name='test 2'}
+GroupDate{id='119', name='test 0'}
+GroupDate{id='120', name='test 1'}
+GroupDate{id='121', name='test 2'}
+GroupDate{id='122', name='test 0'}
+GroupDate{id='123', name='test 1'}
+GroupDate{id='124', name='test 2'}
+GroupDate{id='125', name='test 0'}
+GroupDate{id='126', name='test 1'}
+GroupDate{id='127', name='test 2'}
+GroupDate{id='128', name='test 0'}
+GroupDate{id='129', name='test 1'}
+GroupDate{id='130', name='test 2'}
+GroupDate{id='131', name='test 0'}
+GroupDate{id='132', name='test 1'}
+GroupDate{id='133', name='test 2'}
+GroupDate{id='134', name='test 0'}
+GroupDate{id='135', name='test 1'}
+GroupDate{id='136', name='test 2'}
+GroupDate{id='137', name='test 0'}
+GroupDate{id='138', name='test 1'}
+GroupDate{id='139', name='test 2'}
+GroupDate{id='140', name='test 0'}
+GroupDate{id='141', name='test 1'}
+GroupDate{id='142', name='test 2'}
+GroupDate{id='143', name='test1'}
+GroupDate{id='144', name='test 1'}
+GroupDate{id='145', name='test 2'}
+GroupDate{id='146', name='test 0'}
+GroupDate{id='147', name='test 1'}
+GroupDate{id='148', name='test 2'}
+GroupDate{id='149', name='test 0'}
+GroupDate{id='150', name='test 1'}
+GroupDate{id='151', name='test 2'}
+GroupDate{id='152', name='test 0'}
+GroupDate{id='153', name='test 1'}
+GroupDate{id='154', name='test 2'}
+GroupDate{id='155', name='test 0'}
+GroupDate{id='156', name='test 1'}
+GroupDate{id='157', name='test 2'}
+GroupDate{id='158', name='test 0'}
+GroupDate{id='159', name='test1'}
+GroupDate{id='160', name='test 2'}
+GroupDate{id='161', name='test 0'}
+GroupDate{id='162', name='test 1'}
+GroupDate{id='163', name='test 2'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

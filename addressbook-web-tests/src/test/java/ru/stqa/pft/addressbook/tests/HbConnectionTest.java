@@ -31,8 +31,20 @@ public class HbConnectionTest {
         }
     }
 
-
     @Test
+    public void testHbConnection2 (){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        List<GroupDate> result = session.createQuery( "from GroupDate").list();
+        for ( GroupDate group: result ) {
+            System.out.println(group);
+        }
+        session.getTransaction().commit();
+        session.close();
+
+    }
+
+    @Test()
     public void testHbConnection (){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
